@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Messenger</string>
+    <string name="username">Имя пользователя</string>
+    <string name="password">Пароль</string>
+    <string name="login">Войти</string>
+    <string name="sing_up_solicitation">Don\'t have an account? Sign up!</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="sign_in">Зарегистрироваться</string>
+</resources>
