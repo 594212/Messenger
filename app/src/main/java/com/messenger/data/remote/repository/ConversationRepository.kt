@@ -6,6 +6,6 @@ import io.reactivex.Observable
 
 interface ConversationRepository {
     fun findConversationById( id : Long): Observable<ConversationVO>
-    fun all( id : Long): Observable<ConversationListVO>
+    fun all(): Observable<ConversationListVO>
 
 }

@@ -46,7 +46,6 @@ class LoginInteractorImpl: LoginInteractor {
                     })
             }
         }
-        TODO("Not yet implemented")
     }
 
     override fun retrieveDetails(

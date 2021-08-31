@@ -16,7 +16,7 @@ class ConversationRepositoryImpl(ctx: Context): ConversationRepository {
         return service.showConversation(preferences.accessToken as String,id)
     }
 
-    override fun all(id: Long): Observable<ConversationListVO> {
+    override fun all(): Observable<ConversationListVO> {
         return service.listConversation(preferences.accessToken as String)
     }
 

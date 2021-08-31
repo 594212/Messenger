@@ -6,4 +6,7 @@
     <string name="sing_up_solicitation">Don\'t have an account? Sign up!</string>
     <string name="phone_number">Номер телефона</string>
     <string name="sign_in">Зарегистрироваться</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_logout">Выход</string>
+    <string name="hint_enter_a_message">Введите текст</string>
 </resources>
