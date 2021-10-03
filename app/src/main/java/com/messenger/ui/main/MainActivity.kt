@@ -6,20 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.messenger.R
-import com.messenger.data.local.AppPreferences
-import com.messenger.data.vo.ConversationVO
 import com.messenger.ui.login.LoginActivity
 import com.messenger.ui.main.fragments.ContactsFragment
 import com.messenger.ui.main.fragments.ConversationsFragment
 import com.messenger.ui.settings.SettingsActivity
-import kotlin.concurrent.fixedRateTimer
 
 class MainActivity : AppCompatActivity(), MainView {
     private lateinit var llContainer: LinearLayout
@@ -56,18 +48,20 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun showConversationScreen() {
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.ll_container,conversationFragment)
-        fragmentTransaction.commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.ll_container,conversationFragment)
+            .commit()
+
         presenter.loadConversations()
         supportActionBar?.title = "Messenger"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun showContactsScreen() {
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.ll_container, contactFragment)
-        fragmentTransaction.commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.ll_container, contactFragment)
+            .commit()
+
         presenter.loadContacts()
         supportActionBar?.title = "Contacts"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
